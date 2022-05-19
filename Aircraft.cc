@@ -8,9 +8,7 @@ Aircraft::~Aircraft(){
 }
 
 void Aircraft::install(Part* part, Date& date){
-  //checking if the part is already installed
-  // req 4.8.4.g says "we will assume the necessary error checking for that is done elsewhere." but did not specify where
-  //so I assume it is when you install a part on an aircraft and that parts are distinguished by names.
+  
   for (int i = 0; i < parts.getSize(); i++) {
     if(parts[i]->getName() == part->getName()){
       cout << "Part " << part << " Is already installed on this aircraft" << endl;
